@@ -5,7 +5,6 @@ let nextGameDiv;
 fetch('/api/schedule')
     .then(response => response.json())
     .then(data => {
-        console.log(data);
         let nextGame;
         for (let i = 0; i < data.length; i++) {
             if (nextGame === undefined && data[i].games[0].gameDate > new Date().toISOString()) {
@@ -17,9 +16,7 @@ fetch('/api/schedule')
                 //selects the rest of the games
                 scheduleEl(data[i].games[0], false);
             }
-
         }
-        console.log(nextGame);
         if (nextGameDiv) {
             nextGameDiv.scrollIntoView({ block: 'center' });
         }
