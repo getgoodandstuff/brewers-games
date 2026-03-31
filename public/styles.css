@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+
+#games {
+    overflow-y: auto;
+
+}
+
+.game-container {
+    margin-bottom: 10px;
+    border: 2px solid black;
+}
