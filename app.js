@@ -5,11 +5,6 @@ const port = 3000;
 
 app.use(express.static('public'));
 
-//GETS TEAMS
-// getTeams().then(teams => {
-//     console.log(teams);
-// });
-
 //API ROUTES
 app.get('/api/schedule', async (req, res) => {
     //Sorts out the Games
@@ -23,6 +18,10 @@ app.get('/api/gamefeed', async (req, res) => {
     res.json(gameFeed);
 });
 
+app.get('/api/teams', async (req, res) => {
+    let teams = await getTeams();
+    res.json(teams);
+});
 
 
 

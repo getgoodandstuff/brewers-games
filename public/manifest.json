@@ -1,0 +1,20 @@
+{
+    "name": "Brewers",
+    "short_name": "Brewers",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#12284B",
+    "theme_color": "#FFC52F",
+    "icons": [
+        {
+            "src": "/assets/logo192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/logo512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
