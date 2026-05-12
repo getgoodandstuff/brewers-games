@@ -1,9 +1,9 @@
-const { getGames, getTeams, getGameFeed } = require('./api');
+const { getGames, getTeams, getGameFeed } = require('../api');
 const express = require('express');
 const app = express();
 const port = 3000;
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, "../public")));
 
 //GETS TEAMS
 // getTeams().then(teams => {
@@ -59,7 +59,8 @@ async function getGamesFromAPI() {
 }
 
 
-
-app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}`);
-});
+//for vercel
+module.exports = app;
+// app.listen(port, () => {
+//     console.log(`Server is running at http://localhost:${port}`);
+// });
